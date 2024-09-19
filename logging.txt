@@ -1,0 +1,135 @@
+Request method:	POST
+Request URI:	https://sandbox.juspay.in/session
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic NEVCNDVFNkNCOEI0QTRBQTM5RjM4OTQxMTQ3QkY2Og==
+				Cookie=tokenization_cookie_version_adityabirla_health=1
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "order_id": "TestWCeT7507",
+    "action": "paymentPage",
+    "amount": "15000",
+    "description": "Policy 12345",
+    "customer_email": "amoghayya.wadeyar_1@capitalfloat.com",
+    "customer_id": "9998800290",
+    "customer_phone": "9998800290",
+    "first_name": "test user",
+    "last_name": "test user",
+    "payment_page_client_id": "starhealth",
+    "return_url": "https://selleruat.adityabirlahealth.com/prodreplica/#thankyoupage",
+    "billing_address_first_name": "test user",
+    "billing_address_last_name": "test user",
+    "shipping_address_first_name": "test user",
+    "shipping_address_last_name": "test user",
+    "shipping_address_line1": "test user",
+    "shipping_address_postal_code": "test user",
+    "billing_address_line1": "test user",
+    "billing_address_postal_code": "test user",
+    "currency": "INR",
+    "customer_dob": "21-07-1980",
+    "customer_first_name": "Testing",
+    "customer_last_name": "Testing",
+    "customer_gender": "Male",
+    "customer_address_line1": "address line 1",
+    "customer_state": "Karnataka",
+    "customer_pincode": "560037",
+    "customer_city": "Bengaluru",
+    "is_primary_holder": "true",
+    "udf8": "Care Classic",
+    "udf7": "731",
+    "udf6": "CH06",
+    "udf2": "NEW",
+    "udf9": "17171471724750325649143",
+    "beta_assets": "false",
+    "metadata.sdk_payload": "false",
+    "options.get_client_auth_token": "true",
+    "metadata.webhook_url": "https://selleruat.adityabirlahealth.com/UAT/JustPayController/webhook_url_response",
+    "metadata.policy_renewal_year": "2"
+}
+HTTP/1.1 200 OK
+Date: Thu, 19 Sep 2024 14:39:13 GMT
+Content-Type: application/json
+Content-Length: 1838
+Connection: keep-alive
+server: ***
+x-response-id: f8374687-5695-431a-8884-cf5c047e602a
+x-jp-merchant-id: starhealth
+x-jp-order-id: TestWCeT7507
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: Content-Type, X-RegistrationToken-Id, X-RegistrationToken, X-LoginToken, X-Web-LoginToken, cache-control, x-api, x-jp-merchant-id, x-jp-session-id, x-merchantid, x-feature, X-OrderId, sdk-web-trackname, sdk-micro-app-name, sdk-micro-app-version, sdk-micro-app-config-version, sdk-godel-version, sdk-godel-build-version, sdk-godel-remotes-version, sdk-app-name, sdk-os, sdk-os-version, sdk-browser-version, sdk-browser, sdk-device, sdk-package-name, sdk-user-agent
+cache-control: private, no-cache, no-store, must-revalidate
+strict-transport-security: max-age=63072000; includeSubdomains; preload
+x-xss-protection: 0
+x-content-type-options: nosniff
+referrer-policy: strict-origin
+x-envoy-upstream-service-time: 58
+x-envoy-attempt-count: 1
+
+{
+    "status": "NEW",
+    "id": "ordeh_1acceb70c2f547d38979df25ca677340",
+    "order_id": "TestWCeT7507",
+    "payment_links": {
+        "web": "https://sandbox.assets.juspay.in/payment-page/order/ordeh_1acceb70c2f547d38979df25ca677340",
+        "expiry": "2024-09-22T14:39:13Z"
+    },
+    "sdk_payload": {
+        "requestId": "ab8cab592ee446f4aa4cebef43a983ec",
+        "service": "in.juspay.hyperpay",
+        "payload": {
+            "action": "paymentPage",
+            "amount": "15000.0",
+            "betaAssets": "false",
+            "billingAddressFirstName": "test user",
+            "billingAddressLastName": "test user",
+            "billingAddressLine1": "test user",
+            "billingAddressPostalCode": "test user",
+            "clientAuthToken": "tkn_2d232241bd9f4544a7386e098539df89",
+            "clientAuthTokenExpiry": "2024-09-19T14:54:13Z",
+            "clientId": "starhealth",
+            "collectAvsInfo": false,
+            "currency": "INR",
+            "customerAddressLine1": "address line 1",
+            "customerCity": "Bengaluru",
+            "customerDob": "21-07-1980",
+            "customerEmail": "amoghayya.wadeyar_1@capitalfloat.com",
+            "customerFirstName": "Testing",
+            "customerGender": "Male",
+            "customerId": "9998800290",
+            "customerLastName": "Testing",
+            "customerPhone": "9998800290",
+            "customerPincode": "560037",
+            "customerState": "Karnataka",
+            "description": "Policy 12345",
+            "environment": "sandbox",
+            "firstName": "test user",
+            "isPrimaryHolder": "true",
+            "lastName": "test user",
+            "merchantId": "starhealth",
+            "metadata.policyRenewalYear": "2",
+            "metadata.sdkPayload": "false",
+            "metadata.webhookUrl": "https://selleruat.adityabirlahealth.com/UAT/JustPayController/webhook_url_response",
+            "orderId": "TestWCeT7507",
+            "returnUrl": "https://selleruat.adityabirlahealth.com/prodreplica/#thankyoupage",
+            "service": "in.juspay.hyperpay",
+            "shippingAddressFirstName": "test user",
+            "shippingAddressLastName": "test user",
+            "shippingAddressLine1": "test user",
+            "shippingAddressPostalCode": "test user",
+            "udf2": "NEW",
+            "udf6": "CH06",
+            "udf7": "731",
+            "udf8": "Care Classic",
+            "udf9": "17171471724750325649143"
+        },
+        "expiry": "2024-09-22T14:39:13Z"
+    },
+    "order_expiry": "2024-09-22T14:39:13Z"
+}
