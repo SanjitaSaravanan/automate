@@ -13,7 +13,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "order_id": "TestWCeT7507",
+    "order_id": "TestCfGx9174",
     "action": "paymentPage",
     "amount": "15000",
     "description": "Policy 12345",
@@ -54,14 +54,14 @@ Body:
     "metadata.policy_renewal_year": "2"
 }
 HTTP/1.1 200 OK
-Date: Thu, 19 Sep 2024 14:39:13 GMT
+Date: Fri, 20 Sep 2024 06:28:58 GMT
 Content-Type: application/json
 Content-Length: 1838
 Connection: keep-alive
 server: ***
-x-response-id: f8374687-5695-431a-8884-cf5c047e602a
+x-response-id: 091cf419-f0ba-41f5-a249-2ef38df321b4
 x-jp-merchant-id: starhealth
-x-jp-order-id: TestWCeT7507
+x-jp-order-id: TestCfGx9174
 access-control-allow-methods: GET, POST, OPTIONS
 access-control-allow-headers: Content-Type, X-RegistrationToken-Id, X-RegistrationToken, X-LoginToken, X-Web-LoginToken, cache-control, x-api, x-jp-merchant-id, x-jp-session-id, x-merchantid, x-feature, X-OrderId, sdk-web-trackname, sdk-micro-app-name, sdk-micro-app-version, sdk-micro-app-config-version, sdk-godel-version, sdk-godel-build-version, sdk-godel-remotes-version, sdk-app-name, sdk-os, sdk-os-version, sdk-browser-version, sdk-browser, sdk-device, sdk-package-name, sdk-user-agent
 cache-control: private, no-cache, no-store, must-revalidate
@@ -69,19 +69,19 @@ strict-transport-security: max-age=63072000; includeSubdomains; preload
 x-xss-protection: 0
 x-content-type-options: nosniff
 referrer-policy: strict-origin
-x-envoy-upstream-service-time: 58
+x-envoy-upstream-service-time: 63
 x-envoy-attempt-count: 1
 
 {
     "status": "NEW",
-    "id": "ordeh_1acceb70c2f547d38979df25ca677340",
-    "order_id": "TestWCeT7507",
+    "id": "ordeh_d4cc38ffeceb47a1bc9d64262e02f6de",
+    "order_id": "TestCfGx9174",
     "payment_links": {
-        "web": "https://sandbox.assets.juspay.in/payment-page/order/ordeh_1acceb70c2f547d38979df25ca677340",
-        "expiry": "2024-09-22T14:39:13Z"
+        "web": "https://sandbox.assets.juspay.in/payment-page/order/ordeh_d4cc38ffeceb47a1bc9d64262e02f6de",
+        "expiry": "2024-09-23T06:28:58Z"
     },
     "sdk_payload": {
-        "requestId": "ab8cab592ee446f4aa4cebef43a983ec",
+        "requestId": "edf7d1cc15534aceb64af5f3abb14b0f",
         "service": "in.juspay.hyperpay",
         "payload": {
             "action": "paymentPage",
@@ -91,8 +91,8 @@ x-envoy-attempt-count: 1
             "billingAddressLastName": "test user",
             "billingAddressLine1": "test user",
             "billingAddressPostalCode": "test user",
-            "clientAuthToken": "tkn_2d232241bd9f4544a7386e098539df89",
-            "clientAuthTokenExpiry": "2024-09-19T14:54:13Z",
+            "clientAuthToken": "tkn_1face5b2fc7744c097bf26a4045007da",
+            "clientAuthTokenExpiry": "2024-09-20T06:43:58Z",
             "clientId": "starhealth",
             "collectAvsInfo": false,
             "currency": "INR",
@@ -116,7 +116,7 @@ x-envoy-attempt-count: 1
             "metadata.policyRenewalYear": "2",
             "metadata.sdkPayload": "false",
             "metadata.webhookUrl": "https://selleruat.adityabirlahealth.com/UAT/JustPayController/webhook_url_response",
-            "orderId": "TestWCeT7507",
+            "orderId": "TestCfGx9174",
             "returnUrl": "https://selleruat.adityabirlahealth.com/prodreplica/#thankyoupage",
             "service": "in.juspay.hyperpay",
             "shippingAddressFirstName": "test user",
@@ -129,7 +129,7 @@ x-envoy-attempt-count: 1
             "udf8": "Care Classic",
             "udf9": "17171471724750325649143"
         },
-        "expiry": "2024-09-22T14:39:13Z"
+        "expiry": "2024-09-23T06:28:58Z"
     },
-    "order_expiry": "2024-09-22T14:39:13Z"
+    "order_expiry": "2024-09-23T06:28:58Z"
 }

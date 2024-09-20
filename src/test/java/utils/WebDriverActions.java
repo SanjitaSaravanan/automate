@@ -75,25 +75,31 @@ public class WebDriverActions {
     public void additionalInformation() throws InterruptedException {
         Thread.sleep(3000);
         WebElement fathersname = driver.findElement(By.xpath("//*[@placeholder=\"Father's Name\"]"));
-        System.out.println("found element");
         fathersname.click();
-        System.out.println("found element-----------------------------------");
         fathersname.sendKeys("Father's Name");
-        System.out.println("sending eagnvsfkjgnv jrdkg element");
         Thread.sleep(3000);
         clickNext();
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//article[contains(text(),'Preview Details')]"));
         clickNext();
 
     }
 
+    public void fetchOffer() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//article[contains(text(),'Fetch Offer')]")).click();
+        Thread.sleep(3000);
+    }
+
 
     public void getOffers() throws InterruptedException {
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//article[contains(text(),'Get offers')]"));
         Thread.sleep(5000);
         try {
             driver.findElement(By.xpath("//article[contains(text(),'AXIO')]")).click();
             Thread.sleep(3000);
+            fetchOffer();
         } catch (NoSuchElementException ec) {
             driver.findElement(By.xpath("//article[contains(text(),'Mock Lender')]")).click();
             Thread.sleep(3000);
@@ -122,6 +128,12 @@ public class WebDriverActions {
         driver.findElement(By.xpath("//article[contains(text(),'Start a new Application')]")).click();
     }
 
+    public void previewDetails() throws InterruptedException {
+        Thread.sleep(3000);
+        clickNext();
+        getOffers();
+    }
+
     public void clickNext() throws InterruptedException {
         Thread.sleep(5000);
         driver.findElement(By.xpath("//article[contains(text(),'Next')]")).click();
@@ -141,7 +153,7 @@ public class WebDriverActions {
             Thread.sleep(1000);
             driver.findElement(By.xpath("//article[contains(text(),'Continue')]")).click();
             Thread.sleep(5000);
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 //     for resume state if the user wants to continue the journey as of now we are directly starting new journey
             try{
                 WebElement resumeState = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'You have already applied for a loan and these are the details:')]")));
@@ -150,23 +162,22 @@ public class WebDriverActions {
 //      this is for, if user has completed profile info and wants to continue
             catch (TimeoutException eg) {
                 try {
-                    WebElement previewDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'Preview Details')]")));
-                    driver.findElement(By.xpath("//article[contains(text(),'Next')]")).click();
+                    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'Preview Details')]")));
+                    previewDetails();
                 } catch (TimeoutException e) {
                     try {
-                        WebElement personalInformation = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'Personal Information')]")));
+                        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'Personal Information')]")));
                         personalInformation();
                     } catch (TimeoutException e2) {
                         try {
-                            WebElement financialInformation = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'Financial Information')]")));
+                            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'Financial Information')]")));
                             financialInformation();
                         } catch (TimeoutException e3) {
                             try {
-                                WebElement additionalDetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'Additional Details')]")));
-                                System.out.println("going to addddd");
+                                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article[contains(text(),'Additional Information')]")));
                                 additionalInformation();
                             } catch (TimeoutException e4) {
-                                System.out.println("came here");
+                                System.out.println("At here in last catch");
                             }
                         }
                     }
