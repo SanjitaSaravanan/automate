@@ -36,6 +36,12 @@ public class ReusableMethods {
                 } else {
                     defaultProperties.put("baseUrl", "https://sandbox.juspay.in");
                     defaultProperties.put("payment_page_client_id", "cashify");
+                    defaultProperties.put("merchant_id","please mention merchantid");
+                    defaultProperties.put("cookie","please add cookie");
+                    defaultProperties.put("user-agent","cug");
+                    defaultProperties.put("phone-number","9999999991");
+                    defaultProperties.put("email","juspay.juspay.in");
+                    defaultProperties.put("lender","please add lender");
                 }
                 try (FileOutputStream fos = new FileOutputStream(file)) {
                     saveProperties(defaultProperties, "src/test/java/resources/global.properties"); //
